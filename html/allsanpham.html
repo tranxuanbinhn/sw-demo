@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm</title>
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/DangNhap.css">
+    <link rel="stylesheet" href="../icon/fontawesome-free-6.1.1-web/css/all.css">
+  
+    <script src="../js/Home.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/allproduct.css">
+</head>
+<body>
+    <div id="header_ctn_fix">
+        <div class="header-fix">
+            <div id="header">
+                <div class="shopName">
+                    <a href="../html/index.html"><img src="../img/watch_shop_logo.jpg" alt=""></a>
+                </div>
+    
+                <div class="search-nav">
+                    <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="search-input" class="input_txt">
+                    <i class="fa-solid fa-magnifying-glass" id="search"></i>     
+                </div>
+    
+                <div class="button-dang-nhap">
+                    <span>
+                        <button onclick="document.getElementById('modal').style.display=('block') ">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="gioHang">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <div class="gioHang_hover container-fluid">
+                        <div class="tamgiac">
+                            <i class="fa-solid fa-caret-up"></i>
+                        </div>
+                        <div class="row">
+                            <div class="ctn">
+                                <div class="title_gioHang">
+                                    <h4>Giỏ hàng của bạn</h4>
+                                </div>
+                                <div class="gioHang_hover_sp"></div>
+                            </div>
+                            <div class="gioHang_hover_button">
+                                <button type="button" class="btn">Thanh toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav-fix">
+            <div class="nav">
+                <ul class="dropdown-list">
+                    <a href="../html/index.html"><li class="nav_sp">Trang chủ</li></a>
+                    <li class="nav_sp nav_menu_hover"><a href="../html/allsanpham.html">Sản phẩm</a>
+                        <div >
+                            <ul class="dropdown_product_item_menu">
+                                <ul class="ul_menu_item_1">
+                                    <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nam</li></a>
+                                    <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nữ</li></a>
+                                    <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ theo thương hiệu</li></a>
+                                    <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm mới</li></a>
+                                    <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm bán chạy</li></a>
+                                </ul>
+                                <li class="img_item_dropdown_menu">
+                                    <img src="../img/img_dropdown.png" alt="Dong Ho">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+    
+                    <a href="../html/news.html"><li class="nav_sp">Tin tức</li></a>
+                    <a href="../html/sitemap.html"><li class="nav_sp">Site Map</li></a>
+                    <a href="../html/members.html"><li class="nav_sp">Giới thiệu</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="container_allproduct" class="container-fluid">
+        <div class="row mt-20">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 row">
+                <div class="col-md-3 left_ctn">
+                    <h4>Danh mục sản phẩm</h4>
+                    <div class="menu_allproduct nav navbar-nav">
+                        <ul class="ml-15">
+                            <li class="navbar-item"><a class="link_href" href="#" id="formen_click" onclick="filterProduct('men')">Đồng hồ cho nam</a></li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="forwman_click" onclick="filterProduct('wmen')">Đồng hồ cho nữ</a></li>
+                            <li class="navbar-item dropdown">
+                               <a class="dropdown-toggle" href="#" id="forbrand_click navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                   Đồng hồ theo thương hiệu <i class="fa-solid fa-caret-down"></i></a>
+                               <div class="dropdown-menu dropdown_item_allproduct" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="link_href dropdown-item" href="#" onclick="filterProduct('Michaelkors')">Michael kors</a><br>
+                                    <a class="link_href dropdown-item" href="#" onclick="filterProduct('Fossil')">Fossil</a><br>
+                                    <a class="link_href dropdown-item" href="#" onclick="filterProduct('ARMANIEXCHANGE')">ARMANI EXCHANGE</a><br>
+                                    <a class="link_href dropdown-item" href="#" onclick="filterProduct('DIESEL')">DIESEL</a><br>
+                                    <a class="link_href dropdown-item" href="#" onclick="filterProduct('EMPRIOWARMANI')">EMPRIOWARMANI</a>                              
+                                </div>
+                            </li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="newpr_click" onclick="filterProduct('New')">Sản phẩm mới</a></li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="hotpr_click" onclick="filterProduct('Hot')">Sản phẩm bán chạy</a></li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="allproduct_click" onclick="filterProduct('all')">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9  allproducts">
+                    <h4>Tất cả sản phẩm</h4>
+                    <div class="row justify-content-between">
+                        <div class="cover-card announcement col-md-12" id="wmen wwman wbrand neww hotw allw">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div> 
+    </div>
+     <!-- Footer---------------------------- -->
+    <div id="content-bottom">
+        <div class="text">
+            <h3 class="top">CHÚNG TÔI Ở ĐÂY</h3>
+            <ul>
+                <li>Công Ty cổ phần trực tuyến LAUCH WATCH</li>
+                <li>VPGD: Số 177,Phường 5 - Gò Vấp - TP.HCM</li>
+                <li>Hotline:
+                    <link rel="stylesheet" href="#">0335829410</li>
+                <li>tư vấn bán hàng(8h-21h hàng ngày)</li>
+            </ul>
+        </div>
+        <div class="text">
+            <h3 class="top">VỀ WATCH SHOP</h3>
+            <ul>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Điều khoản dịch vụ</a></li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3 class="top">CHÍNH SÁCH</h3>
+            <ul>
+                <li><a href="#">Chính sách đối sản phẩm</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Chính sách vận chuyển</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách thanh toán</a></li>
+                <li><a href="#">Chính sách mua hàng</a></li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3 class="top">HỖ TRỢ</h3>
+        </div>
+
+        <div class="text">
+            <ul>
+                <h3 class="top">LIÊN HỆ</h3>
+                <li class="icon">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram-square"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="button-home">
+        <div>
+            <a href="#">
+                <i class="fa-solid fa-angles-up"></i>
+                <p>Quay lại đầu trang</p>
+            </a>
+        </div>
+    </div>
+    <div class="coppy-right">
+        <div>
+          <p>Powered By Binh & Diep - Since 2022 - © Góp ý & Khiếu nại: binh.com</p>
+        </div>
+    </div>
+</div>
+<div id="modal">
+    <div class="modal-overlay"></div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <button onclick="document.getElementById('modal').style.display=('none') ">
+            <i class="fa-solid fa-xmark" ></i>
+        </button>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <div class="button-submit">
+                <a href="#" class="link">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> Đăng nhập
+                </a>
+            </div>
+        </form>
+        <span class="checkBox"><input type="checkbox"> Nhớ mật khẩu</span> 
+        <p>Bạn chưa có tài khoản? <a href="../html/Form-dang-ky.html">Đăng kí</a> ngay</p>
+    </div>
+</div>
+
+<script>
+    const listProduct = [
+            {
+                id: 1,
+                productCode: 'DH1',
+                name: 'Đồng hồ Phillipe AUGUSTE PA2022',
+                trademark: 'Michaelkors',
+                status: 'Còn hàng',
+                unitprice: '6,325,000đ',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho9.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 2,
+                productCode: 'DH2',
+                name: "Đồng hồ cao cấp Bovet AS36001SD12",
+                trademark: 'Michaelkors',
+                status: 'Còn hàng',
+                unitprice: '840,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho10.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 3,
+                productCode: 'DH3',
+                name: 'Đồng hồ EPOS SWISS E-3408',
+                trademark: 'Fossil',
+                status: 'Còn hàng',
+                unitprice: '1,240,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho11.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 4,
+                productCode: 'DH4',
+                name: 'Đồng hồ Jacques Lemans ',
+                trademark: 'Fossil',
+                status: 'Còn hàng',
+                unitprice: '4,100,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho12.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 5,
+                productCode: 'DH5',
+                name: 'Đồng hồ Diamond Jacques DM36505IG',
+                trademark: 'ARMANIEXCHANGE',
+                status: 'Còn hàng',
+                unitprice: '200,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho13.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 6,
+                productCode: 'DH6',
+                name: 'Đồng hồ Diamond Jacques DM38445IG',
+                trademark: 'ARMANIEXCHANGE',
+                status: 'Còn hàng',
+                unitprice: '1,240,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongho14.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 7,
+                productCode: 'DH7',
+                name: 'Đồng hồ Diamond Jacques DM38025IG',
+                trademark: 'ARMANIEXCHANGE',
+                status: 'Còn hàng',
+                unitprice: '1,400,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongho15.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 8,
+                productCode: 'DH8',
+                name: 'Đồng hồ Diamond Jacques DM36505',
+                trademark: 'DIESEL',
+                status: 'Còn hàng',
+                unitprice: '1,400,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongho16.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 9,
+                productCode: 'DH9',
+                name: 'Đồng hồ Michael Kors',
+                trademark: 'DIESEL',
+                status: 'Còn hàng',
+                unitprice: '600,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/Men1.png',
+                sex: 'men',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'            },
+            {
+                id: 10,
+                productCode: 'DH10',
+                name: 'Đồng hồ Michael Kors mạ vàng',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '1,040,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/Men2.png',
+                sex: 'wmen',
+                 diameter: '40mm',
+                rope_size  : '2 mm',
+                material: 'gold',
+                origin: 'VietNam'
+            },
+            {
+                id: 11,
+                productCode: 'DH11',
+                name: 'Đồng hồ Diesel đen chat lieu thep khong gi',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '200.000đ',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/Men3.png',
+                sex: 'wmen',
+                 diameter: '40mm',
+                rope_size: '20mm',
+                material: 'gold',
+                origin: 'America'
+            },
+            {
+                id: 12,
+                productCode: 'DH12',
+                name: 'Đồng hồ Diesel đen ma vang',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '1,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongHo_1.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'VietNam'
+              
+
+            },
+            {
+                id: 13,
+                productCode: 'DH13',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongHo_2.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            },
+            {
+                id: 14,
+                productCode: 'DH14',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongHo_3.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 15,
+                productCode: 'DH15',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongHo_3.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 16,
+                productCode: 'DH16',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'New',
+                img: '../img/dongHo_4.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 17,
+                productCode: 'DH17',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongHo_5.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 18,
+                productCode: 'DH18',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongHo_6.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 19,
+                productCode: 'DH19',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongHo_7.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }, {
+                id: 20,
+                productCode: 'DH20',
+                name: 'Đồng hồ Emporio Armani bạc',
+                trademark: 'EMPRIOWARMANI',
+                status: 'Còn hàng',
+                unitprice: '2,800,000₫',
+                information: 'Thiết kế thời thượng, đỉnh cao',
+                type: 'Hot',
+                img: '../img/dongHo_8.png',
+                sex: 'wmen',
+                diameter: '40mm',
+                rope_size: '20mm',
+                material: 'Unarium',
+                origin: 'Mỹ'
+              
+
+            }
+            
+        ]
+        localStorage.setItem('product', JSON.stringify(listProduct))
+        const productData = JSON.parse(localStorage.getItem('product'))
+        const displayall = (product) => {
+            const card =
+                `<div class="hide card col-md-3 ${product.id} ${product.sex} ${product.trademark} ${product.type}  ">
+                <a href="detailproduct.html" onclick="setId(${product.id})">
+                    <div>
+                        <img class="card-img-top" src="${product.img}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <a href="detailproduct.html" onclick="setId(${product.id})" style="text-decoration: none;">
+                            <h5 class="card-title product-name">${product.name}</h5>
+                        </a>
+                        <p class="card-text">${product.unitprice}</p>
+                    </div>
+                </a>
+            </div>
+            `
+            $('.cover-card').append(card);
+        }
+    const setId = (id) => {
+        localStorage.setItem('id', id);
+    }
+     //Hiển thị mặc định
+
+     productData.forEach(el => {
+            displayall(el)
+        })    
+        
+    //Hiển thị theo mục
+    function filterProduct(value) {
+  //Button class code
+    let buttons = document.querySelectorAll(".link_href");
+    buttons.forEach((button) => {
+        //check if value equals innerText
+        if (value.toUpperCase() == button.innerText.toUpperCase()) {
+        button.classList.add("active");
+        } else {
+        button.classList.remove("active");
+        }
+    });
+
+    //select all cards
+    let elements = document.querySelectorAll(".card");
+    //loop through all cards
+    elements.forEach((element) => {
+    //display all cards on 'all' button click
+        if (value == "all") {
+            element.classList.remove("hide");
+        } 
+        else {
+      //Check if element contains category class
+      if (element.classList.contains(value)) {
+        //display element based on category
+            element.classList.remove("hide");
+        } else {
+            //hide other elements
+            element.classList.add("hide");
+        }
+    }
+    });
+    }
+       
+     //Tìm kiếm
+
+     document.getElementById("search").addEventListener("click", () => {
+         //initializations
+       
+          let searchInput = document.getElementById("search-input").value;
+         let elements = document.querySelectorAll(".product-name");
+            let cards = document.querySelectorAll(".card");
+           
+         //loop through all elements
+         elements.forEach((element, index) => {
+         //check if text includes the search value
+        if (element.innerText.includes(searchInput)) {
+              //display matching card
+            cards[index].classList.remove("hide");
+        } else {
+            //hide others
+            cards[index].classList.add("hide");
+            }
+        });
+        })     ;    
+        window.onload = () => {
+         filterProduct("all");
+        };
+        //Hiển thị sản phẩm trong giỏ hàng
+        
+        var cart_trigger=JSON.parse(localStorage.getItem('productincart'));     
+        console.log(cart_trigger);
+        const display_cart=(productincart)=>
+        {
+            const card=` <div class="inner_cart ${productincart.id}">
+                <div class="img_sanpham">
+                <img class="img" src="${productincart.img}" alt="">
+                </div>
+                <div class="name_sanpham"><p>${productincart.name}</p></div>
+                <div class="soluong_sanpham">
+                    <select class="form-control small-select" name="quantity" id="qty9343848" onchange="this.form.submit()">
+                        <option value="1" selected="">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>	
+                    </select></div>
+                <div class="gia_sanpham"><p>${productincart.unitprice}</p></div>
+                <i class="fa-solid fa-trash-can ${productincart.id} bin"></i>
+                </div>
+
+                </div>`
+ 
+        $('.gioHang_hover_sp').append(card);
+        }
+        cart_trigger.forEach(el => {
+            display_cart(el)
+        })
+    </script>
+</body>
+</html>

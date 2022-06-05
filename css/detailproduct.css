@@ -1,0 +1,144 @@
+
+.productdetail-info_detail .productdetail-title
+{
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+.productdetail-info_detail .soTien{
+    position: absolute;
+}
+.productdetail-info_detail .quantity{
+    margin-top: 100px;
+}
+.soTien .money{
+    color: rgb(237, 8, 8);
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+.soTien{
+    top: 145px;
+}
+
+.icon-quantity{
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 26px;
+    width: 20%;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: center;
+    padding: 8px 0;
+}
+.quantityNumber input{
+    border: none;
+    text-align: center;
+    width: 50%;
+    outline: none;
+}
+.small-select{
+    display: inline-block;
+    width: 15%;
+    border: 0;
+    outline: #ccc;
+    border-radius: 0;
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    margin-left: 10px;
+}
+.productdetail-info_detail .quantity{
+    margin-top: 96px;
+    line-height: 41px;
+    margin-bottom: 5px;
+}
+.btn-Giohang .add-cart{
+    background: #008f71;
+    color: #fff;
+    border-radius: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 400px;
+    height: 42px;
+    border: none;
+}
+.thongSoKyThuat .title_ctsp{
+    font-size: 22px;
+    padding: 0;
+    text-transform: none;
+    font-weight: bold;
+}
+.hide{
+    display: none;
+}
+.thongSoKyThuat p
+{
+    line-height: 41px;
+    margin: none !important;
+}
+.atribute_item
+{
+    border: none;
+    margin: 18px 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+.img_Philip
+{
+    margin-top: 64px;
+    border-right: 1px solid #ccc;
+    
+}
+.img_Philip img
+{
+    width: 75%;
+}
+.productdetail-title
+{
+    margin-top: 60px;
+}
+.text-bold
+{
+    font-weight: bold;
+    margin-right: 10px;
+    width: 150px;
+    display: inline-block;
+}
+.thongSoKyThuat
+{
+    padding: 0 0 0 25px;
+}
+.details
+{
+    padding-top: 155px;
+    margin-bottom: 10px;
+}
+.relate_product
+{
+    height: 1px;
+    margin-top: 40px;
+    border: 1px solid var(--main-color);
+   
+}
+.title_relate_product h3{
+    margin-right: 11px;
+    margin-bottom: 35px;
+    margin-top: 33px;
+   
+}
+.title_relate_product{
+    margin-left: 78px;
+}
+.mbt-25{
+    margin-bottom: 25px;
+}
+.pdl-75{
+    padding-left: 75px;
+}

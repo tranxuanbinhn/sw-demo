@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả tin tức</title>
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/DangNhap.css">
+    <link rel="stylesheet" href="../icon/fontawesome-free-6.1.1-web/css/all.css">
+  
+    <script src="../js/Home.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/tintuc.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header_ctn_fix">
+            <div class="header-fix">
+                <div id="header">
+                    <div class="shopName">
+                        <a href="../html/index.html"><img src="../img/watch_shop_logo.jpg" alt=""></a>
+                    </div>
+    
+                    <div class="search-nav">
+                        <input type="text" placeholder="Nhập từ khóa tìm kiếm..." class="input_txt">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    
+                    </div>
+    
+                    <div class="button-dang-nhap">
+                        <span>
+                            <button onclick="document.getElementById('modal').style.display=('block') ">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </button>
+                        </span>           
+                    </div>
+                    <div class="gioHang">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <div class="gioHang_hover container-fluid">
+                            <div class="tamgiac">
+                                <i class="fa-solid fa-caret-up"></i>
+                            </div>
+                            <div class="row">
+                                <div class="ctn">
+                                    <div class="title_gioHang">
+                                        <h4>Giỏ hàng của bạn</h4>
+                                    </div>
+                                    <div class="gioHang_hover_sp"></div>
+                                </div>
+                                <div class="gioHang_hover_button">
+                                    <button type="button" class="btn">Thanh toán</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-fix">
+                <div class="nav">
+                    <ul class="dropdown-list">
+                        <a href="../html/index.html"><li class="nav_sp">Trang chủ</li></a>
+                        <li class="nav_sp nav_menu_hover"><a href="../html/allsanpham.html">Sản phẩm</a>
+                            <div >
+                                <ul class="dropdown_product_item_menu">
+                                    <ul class="ul_menu_item_1">
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nam</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nữ</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ theo thương hiệu</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm mới</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm bán chạy</li></a>
+                                    </ul>
+                                <li class="img_item_dropdown_menu">
+                                    <img src="../img/img_dropdown.png" alt="Dong Ho">
+                                </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <a href="../html/news.html"><li class="nav_sp">Tin tức</li></a>
+                        <a href="../html/sitemap.html"><li class="nav_sp">Site Map</li></a>
+                        <a href="../html/members.html"><li class="nav_sp">Giới thiệu</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="container_allproduct" class="container-fluid">
+            <div class="row mt-20">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 row">
+                    <div class="col-md-3 left_ctn">
+                        <h4>Danh mục tin tức</h4>
+                        <div class="menu_allproduct nav navbar-nav">
+                            <ul class="ml-15">
+                            <li class="navbar-item"><a class="link_href" href="#" id="formen_click" onclick="filterNews('New')">Tin mới</a></li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="forwman_click" onclick="filterNews('Hot')">Truy cập nhiều</a></li>
+                            <li class="navbar-item"><a class="link_href" href="#" id="forwman_click" onclick="filterNews('all')">Tất cả tin tức</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9  allproducts">
+                        <h4>Tin tức</h4>
+                        <div class="row justify-content-between">
+                            <div class="cover-card announcement col-md-12" id="wmen wwman wbrand neww hotw allw"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div> 
+        </div>
+     <!-- Footer---------------------------- -->
+     <div id="content-bottom">
+        <div class="text">
+            <h3 class="top">CHÚNG TÔI Ở ĐÂY</h3>
+            <ul>
+                <li>Công Ty cổ phần trực tuyến LAUCH WATCH</li>
+                <li>VPGD: Số 177,Phường 5 - Gò Vấp - TP.HCM</li>
+                <li>Hotline:
+                    <link rel="stylesheet" href="#">0335829410</li>
+                <li>tư vấn bán hàng(8h-21h hàng ngày)</li>
+            </ul>
+        </div>
+        <div class="text">
+            <h3 class="top">VỀ WATCH SHOP</h3>
+            <ul>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Điều khoản dịch vụ</a></li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3 class="top">CHÍNH SÁCH</h3>
+            <ul>
+                <li><a href="#">Chính sách đối sản phẩm</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Chính sách vận chuyển</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách thanh toán</a></li>
+                <li><a href="#">Chính sách mua hàng</a></li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h3 class="top">HỖ TRỢ</h3>
+        </div>
+
+        <div class="text">
+            <ul>
+                <h3 class="top">LIÊN HỆ</h3>
+                <li class="icon">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram-square"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="button-home">
+        <div>
+            <a href="#">
+                <i class="fa-solid fa-angles-up"></i>
+                <p>Quay lại đầu trang</p>
+            </a>
+        </div>
+    </div>
+    <div class="coppy-right">
+        <div>
+          <p>Powered By Binh & Diep - Since 2022 - © Góp ý & Khiếu nại: binh.com</p>
+        </div>
+    </div>
+   
+</div>
+<div id="modal">
+    <div class="modal-overlay"></div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <button onclick="document.getElementById('modal').style.display=('none') ">
+            <i class="fa-solid fa-xmark" ></i>
+        </button>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <div class="button-submit">
+                <a href="#" class="link">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> Đăng nhập
+                </a>
+            </div>
+        </form>
+        <span class="checkBox"><input type="checkbox"> Nhớ mật khẩu</span> 
+        <p>Bạn chưa có tài khoản? <a href="../html/Form-dang-ky.html">Đăng kí</a> ngay</p>
+    </div>
+</div>
+</div>
+
+    <script>
+        const listnews = [
+            {
+                id: 1,
+                img: '../img/news1.png',
+                name: 'ĐÁNH GIÁ ĐỒNG HỒ MONTBLANC CỦA NƯỚC NÀO, GIÁ BAO NHIÊU, CÓ TỐT KHÔNG?',
+                title:'Montblanc là một công ty với những dụng cụ...',
+                
+                type: 'Hot',
+                
+                information: 'Montblanc là một công ty với những dụng cụ bút viết sang trọng và công ty bắt đầu sản xuất đồng hồ vào năm 1996 trở lại đây, nhưng Montblanc vẫn cho thấy được kinh nghiệm của mình trên thị trường đồng hồ nói chung. ',
+                     },
+            {
+                id: 2,
+                img: '../img/img-tintuc.jpg',  
+                name: 'Chọn đồng hồ theo mệnh',
+                title:'Bạn là người mệnh Mộc nhưng không biết nam...',
+              
+                type: 'Hot',
+               
+                information: 'Bạn là người mệnh Mộc nhưng không biết nam nữ mệnh Mộc đeo đồng hồ màu gì mới tốt cho bản thân? Bài viết dưới đây Hải Triều sẽ giải đáp hết những khúc mắc này Đồng hồ hình tròn Hình tròn là đại diện cho năng lượng của nguyên tố “Kim”. Căn cứ theo quan niệm “Thứ khắc quan” trong Dịch Lý thì sao Kim là ngôi sao quan với nguyên tố Mộc mà nó khắc. Do đó ,những chiếc đồng hồ hình tròn là lựa chọn tuyệt vời dành cho người mệnh Mộc và mệnh Hỏa. Sở hữu một chiếc đồng hồ hình tròn trên tay sẽ giúp cho những người mệnh Mộc và Hỏa có được nhiều sức khỏe, gặp nhiều may mắn trong công việc. ' },
+            {
+                id: 3,
+                img: '../img/news3.png',
+                title:'Montblanc là một công ty với những dụng cụ...',
+                name: 'ĐỒNG HỒ MONTBLANC NAM, NỮ CỦA NƯỚC NÀO, GIÁ BAO NHIÊU?',
+              
+                type: 'New',
+               
+                information: 'Montblanc là một công ty với những dụng cụ bút viết sang trọng và công ty bắt đầu sản xuất đồng hồ vào năm 1996 trở lại đây, nhưng Montblanc vẫn cho thấy được kinh nghiệm của mình trên thị trường đồng hồ nói chung. ',   },
+            {
+                id: 4,
+                img: '../img/news4.png',    
+                name: 'KINH NGHIỆM MUA ĐỒNG HỒ FOSSIL XÁCH TAY ĐỂ KHÔNG BỊ LỪA',
+                title:'Đồng hồ Fossil xách tay thường có mức giá vô cùng hấp dẫn...',
+              
+                type: 'New',
+                information: 'Đồng hồ Fossil xách tay thường có mức giá vô cùng hấp dẫn bởi chúng không phải chịu những loại thuế hay chi phí nào khác. ',
+                 }
+           
+        ]
+        localStorage.setItem('news', JSON.stringify(listnews))
+        const newsData = JSON.parse(localStorage.getItem('news'))
+        const displayall = (news) => {
+            const card =
+                `<div class="hide card col-md-3 ${news.type}">
+                <a href="newsdetail.html" onclick="setId(${news.id})">
+                    <div class="card-img-tt">
+                        <img class="card-img-top" src="${news.img}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <a href="newsdetail.html" onclick="setId(${news.id})" style="text-decoration: none;">
+                            <h5 class="card-title">${news.name}</h5>
+                        </a>
+                        
+                        <p class="card-title_content"> ${news.title}<a  class="card-title" href="newsdetail.html" onclick="setId(${news.id})"><b>Xem thêm</b></a></p>
+                    </div>
+                </a>
+            </div>
+            `
+            $('.cover-card').append(card);
+        }
+        const setId = (id) => {
+            localStorage.setItem('id', id);
+        }
+        //Hiển thị mặc định
+
+        newsData.forEach(el => {
+            displayall(el)
+        })
+        
+        //Hiển thị theo mục
+    function filterNews(value) {
+    //Button class code
+    let buttons = document.querySelectorAll(".link_href");
+    buttons.forEach((button) => {
+    //check if value equals innerText
+    if (value.toUpperCase() == button.innerText.toUpperCase()) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+    });
+
+    //select all cards
+    let elements = document.querySelectorAll(".card");
+    //loop through all cards
+    elements.forEach((element) => {
+    //display all cards on 'all' button click
+    if (value == "all") {
+      element.classList.remove("hide");
+    } else {
+      //Check if element contains category class
+      if (element.classList.contains(value)) {
+        //display element based on category
+        element.classList.remove("hide");
+      } else {
+        //hide other elements
+        element.classList.add("hide");
+      }
+    }
+    });
+    }
+       
+        
+    $(document).ready(() => {
+        $('#btn-search').click(() => {
+                const productCode = $('#search-text').val()
+                if (productCode.trim() === '' || productCode == '') {
+                    $('.announcement').html('')
+                    productData.forEach(display)
+                    return true
+                }
+                const findproductCode = productData.find(el => el.productCode == productCode)
+                console.log(findproductCode)
+                if (findproductCode == undefined) {
+                    $('.announcement').html('<i>Khong tim thay san pham</i>')
+                    return false
+                }
+                $('.announcement').html('')
+                display(findproductCode)
+                return true;
+        })
+    })
+    window.onload = () => {
+         filterNews("all");
+        };     
+
+    //Hiển thị sản phẩm trong giỏ hàng
+    var cart_trigger=JSON.parse(localStorage.getItem('productincart'));         
+        console.log(cart_trigger);
+        
+        const display_cart=(productincart)=>
+        {
+            const card=` <div class="inner_cart ${productincart.id}">
+
+        <div class="img_sanpham">
+        <img class="img" src="${productincart.img}" alt="">
+        </div>
+        <div class="name_sanpham"><p>${productincart.name}</p></div>
+        <div class="soluong_sanpham">
+            <select class="form-control small-select" name="quantity" id="qty9343848" onchange="this.form.submit()">
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>	
+            </select>
+        </div>
+        <div class="gia_sanpham"><p>${productincart.unitprice}</p></div>
+        <i class="fa-solid fa-trash-can ${productincart.id} bin"></i>
+        </div>
+
+        </div>`
+        $('.gioHang_hover_sp').append(card);
+        }
+        cart_trigger.forEach(el => {
+            display_cart(el)
+        })
+    </script>
+</body>
+</html>

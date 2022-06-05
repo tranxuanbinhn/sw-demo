@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/DangNhap.css">
+    <link rel="stylesheet" href="../icon/fontawesome-free-6.1.1-web/css/all.css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/Home.js"></script>
+    <link rel="stylesheet" href="../css/Form_dang_ky.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header_ctn_fix">
+            <div class="header-fix">
+                <div id="header">
+                    <div class="shopName">
+                        <a href="../html/index.html"><img src="../img/watch_shop_logo.jpg" alt=""></a>
+                    </div>
+    
+                    <div class="search-nav">
+                        <input type="text" placeholder="Nhập từ khóa tìm kiếm..." class="input_txt">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                       
+                    </div>
+    
+                    <div class="button-dang-nhap">
+                        <span>
+                            <button onclick="document.getElementById('modal').style.display=('block') ">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="gioHang">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <div class="gioHang_hover container-fluid">
+                            <div class="tamgiac">
+                                <i class="fa-solid fa-caret-up"></i>
+                            </div>
+                            <div class="row">
+                                <div class="ctn">
+                                    <div class="title_gioHang">
+                                        <h4>Giỏ hàng của bạn</h4>
+                                    </div>
+                                    <div class="gioHang_hover_sp"></div>
+                                </div>
+                                <div class="gioHang_hover_button">
+                                    <button type="button" class="btn">Thanh toán</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-fix">
+                <div class="nav">
+                    <ul class="dropdown-list">
+                        <a href="../html/index.html"><li class="nav_sp">Trang chủ</li></a>
+                        <li class="nav_sp nav_menu_hover"><a href="../html/allsanpham.html">Sản phẩm</a>
+                            <div >
+                                <ul class="dropdown_product_item_menu">
+                                    <ul class="ul_menu_item_1">
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nam</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nữ</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ theo thương hiệu</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm mới</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm bán chạy</li></a>
+                                    </ul>
+                                   <li class="img_item_dropdown_menu">
+                                       <img src="../img/img_dropdown.png" alt="Dong Ho">
+                                   </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <a href="../html/news.html"><li class="nav_sp">Tin tức</li></a>
+                        <a href="../html/sitemap.html"><li class="nav_sp">Site Map</li></a>
+                        <a href="../html/members.html"><li class="nav_sp">Giới thiệu</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         
+        <div id="regester_form">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 mbt-40">
+                <div class="title_regester">
+                   <h4>Đăng kí</h4>
+                   <p>Hãy đăng kí để đón chờ nhiều ưu đãi</p>
+                </div>
+                <div class="form_control">
+                    <div class="row">
+                        <div class="col-lg-6 form-group">
+                            <label for="register-firstname"><label for="firstname__0" class="input-required-label">Họ & Tên Đệm</label></label>
+                            <input type="text" name="firstname" placeholder="Họ & Tên Đệm" data-clean="fullname" data-clean-case="namecase" data-error="Must be a valid First name" id="firstname__0" class="form-control mb-3 hoten_check" required="">	
+                            <div class="help-block with-errors hotenzx" id="errTxt_Ho"></div>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <label for="register-lastname"><label for="lastname__0" class="input-required-label">Tên</label></label>
+                            <input placeholder="Tên" type="text" name="lastname"  data-clean="fullname" data-clean-case="namecase" data-error="Must be a valid Surname" id="lastname__0" class="form-control mb-3 hoten_check" required="">	
+                            <div class="help-block with-errors hotenzx" id="errTxt_Ten" ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <label for="email__0" class="input-required-label">Email</label>
+                        <input type="email" name="email" placeholder="Email" data-clean="email" id="email__0" class="form-control mb-3 email_check" required="">	
+                        <div class="help-block with-errors zxemail" id="errTxt_Email"></div>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="phone__0" class="input-required-label">Số điện thoại</label> 
+                        <input type="tel" name="phone" placeholder="Số điện thoại" data-clean="telephone" data-error="Please provide a valid phone number" id="phone__0" class="form-control mb-3 sdt_check" required="">	
+                        <div class="help-block with-errors zxsdt" id="errTxt_Sdt"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <label for="myPassword" class="input-required-label">Mật khẩu</label> 
+                        <input type="password" name="password" id="myPassword" placeholder="Mật khẩu" data-error="Phải dài hơn 8 kí tự, bao gồm chữ và số (A-z)" class="form-control mb-3 matkhaucheck" required="">	
+                        <div class="help-block with-errors zxmatkhau" id="errTxt_Matkhau"></div>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="confirmPassword__0" class="input-required-label">Xác nhận mật khẩu</label> 
+                        <input type="password" placeholder="Xác nhận mật kh" name="confirmPassword" data-match="#myPassword" data-match-error="Mật khẩu phải khớp" data-error="Please fill in this field" id="confirmPassword__0" class="form-control mb-3" required="">	
+                        <div class="help-block with-errors" id="errTxt_XNMatkhau"></div>
+                    </div>
+                </div>
+                <div class="row btn_rg">
+                    <div class="col-lg-6 form-group pl-0 reg-submit">
+                        <input onclick="dangky()" type="submit" name="btn-request" class="button stock-btn wide disabled btn-regester" value="Register">
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+      <!-- Footer---------------------------- -->
+        <div id="content-bottom">
+            <div class="text">
+                <h3 class="top">CHÚNG TÔI Ở ĐÂY</h3>
+                <ul>
+                    <li>Công Ty cổ phần trực tuyến LAUCH WATCH</li>
+                    <li>VPGD: Số 177,Phường 5 - Gò Vấp - TP.HCM</li>
+                    <li>Hotline:
+                        <link rel="stylesheet" href="#">0335829410</li>
+                    <li>tư vấn bán hàng(8h-21h hàng ngày)</li>
+                </ul>
+            </div>
+            <div class="text">
+                <h3 class="top">VỀ LAUCH WATCH</h3>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div class="text">
+                <h3 class="top">CHÍNH SÁCH</h3>
+                <ul>
+                    <li><a href="#">Chính sách đối sản phẩm</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Chính sách mua hàng</a></li>
+                </ul>
+            </div>
+
+            <div class="text">
+                <h3 class="top">HỖ TRỢ</h3>
+            </div>
+
+            <div class="text">
+                <ul>
+                    <h3 class="top">LIÊN HỆ</h3>
+                    <li class="icon">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram-square"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-home">
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-angles-up"></i>
+                    <p>Quay lại đầu trang</p>
+                </a>
+            </div> 
+        </div>
+        <div class="coppy-right">
+            <div>
+                <p>Powered By Binh & Diep - Since 2022 - © Góp ý & Khiếu nại: binh.com</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <div class="modal-overlay"></div>
+        <div class="login-box">
+            <h2>Login</h2>
+            <button onclick="document.getElementById('modal').style.display=('none') ">
+                <i class="fa-solid fa-xmark" ></i>
+            </button>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label>Password</label>
+                </div>
+                <div class="button-submit">
+                    <a href="#" class="link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Đăng nhập
+                    </a>
+                </div>
+            </form>
+            <span class="checkBox"><input type="checkbox"> Nhớ mật khẩu</span> 
+            <p>Bạn chưa có tài khoản? <a href="../html/Form-dang-ky.html">Đăng kí</a> ngay</p>
+        </div>
+    </div>
+    <script>
+
+    function dangky(){
+          
+    //Kiểm tra Họ
+           let ho=document.getElementById("firstname__0").value;
+           let errho=document.getElementById("errTxt_Ho");
+           let errRegularHo=/^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+           if(ho.trim()=="" && !errRegularHo.test(ho))
+           {
+               errho.innerHTML="Họ phải nhập chính xác";
+               return false;
+           }
+           else
+           {
+            errho.innerHTML = "";
+           }
+
+           //Kiem tra Ten
+           let Ten=document.getElementById("lastname__0").value;
+           let errten=document.getElementById("errTxt_Ten");
+           let errRegularTen=/^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+           if(Ten.trim()=="" && !errRegularTen.test(Ten))
+           {
+               errten.innerHTML="Tên phải nhập chính xác";
+               return false;
+           }
+           else
+           {
+            errten.innerHTML = "";
+           }
+
+            //Kiem tra Email
+            let email=document.getElementById("email__0").value;
+           let editerremail= document.getElementById("errTxt_Email");
+           let errRegularemail=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+           if(email.trim()=="" || !errRegularemail.test(email))
+           {
+            editerremail.innerHTML="Email không hợp lệ";
+               return false;
+           }
+           else
+           {
+            editerremail.innerHTML = "";
+           }
+
+           //Kiem tra so dien thoai
+           let sdt=document.getElementById("phone__0").value;
+           let editerrsdt= document.getElementById("errTxt_Sdt");
+           let errRegular=/^[0-9]{9,10}$/
+           if(sdt.trim()=="" || !errRegular.test(sdt))
+           {
+               editerrsdt.innerHTML="Số điện thoại gồm 10 số";
+               return false;
+           }
+           else
+           {
+            editerrsdt.innerHTML = "";
+           }
+
+           //Kiem tra mat khau
+           let matkhau=document.getElementById("myPassword").value;
+           let editerrmatkhau= document.getElementById("errTxt_Matkhau");
+           let errRegularmk=/(?=^.{8,}$)$"/
+           if(matkhau.trim()=="")
+           {
+            editerrmatkhau.innerHTML="Mật khẩu không được trống";
+               return false;
+           }
+           else
+           {
+            editerrmatkhau.innerHTML = "";
+           }
+           
+           let xnmatkhau=document.getElementById("confirmPassword__0").value;
+           let editerrxnmatkhau= document.getElementById("errTxt_XNMatkhau");
+           if(xnmatkhau.trim()=="" || !xnmatkhau.match(matkhau))
+           {
+            editerrxnmatkhau.innerHTML="Mật khẩu chưa khớp";
+               return false;
+           }
+           else
+           {
+            editerrxnmatkhau.innerHTML = "";
+           }
+           return true;
+       }
+
+        //Hiển thị sản phẩm trong giỏ hàng
+        var cart_trigger=JSON.parse(localStorage.getItem('productincart'));
+        console.log(cart_trigger);
+        const display_cart=(productincart)=>{
+            const card=` <div class="inner_cart ${productincart.id}">
+            <div class="img_sanpham">
+            <img class="img" src="${productincart.img}" alt="">
+            </div>
+                <div class="name_sanpham"><p>${productincart.name}</p></div>
+                <div class="soluong_sanpham">
+                    <select class="form-control small-select" name="quantity" id="qty9343848" onchange="this.form.submit()">
+                        <option value="1" selected="">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>	
+                    </select></div>
+                <div class="gia_sanpham"><p>${productincart.unitprice}</p></div>
+                <i class="fa-solid fa-trash-can ${productincart.id} bin"></i>
+                </div>
+            </div>`
+        $('.gioHang_hover_sp').append(card);
+        }
+            cart_trigger.forEach(el => {
+                display_cart(el)
+        })
+    </script>
+</body>

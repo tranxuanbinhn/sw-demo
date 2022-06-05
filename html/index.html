@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/DangNhap.css">
+    <link rel="stylesheet" href="../icon/fontawesome-free-6.1.1-web/css/all.css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/Home.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/allproduct.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header_ctn_fix">
+            <div class="header-fix">
+                <div id="header">
+                    <div class="shopName">
+                        <a href="../html/index.html"><img src="../img/watch_shop_logo.jpg" alt=""></a>
+                    </div>
+                    <div class="search-nav">
+                        <input type="text" placeholder="Nhập từ khóa tìm kiếm..." id="search-input" class="input_txt">
+                        <a href="../html/allsanpham.html"><i class="fa-solid fa-magnifying-glass" id="search"></i></a>
+                    </div>
+                    <div class="button-dang-nhap">
+                        <span>
+                            <button onclick="document.getElementById('modal').style.display=('block') ">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="gioHang">
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <div class="gioHang_hover container-fluid">
+                            <div class="tamgiac">
+                                <i class="fa-solid fa-caret-up"></i>
+                            </div>
+                            <div class="row">
+                                <div class="ctn">
+                                    <div class="title_gioHang">
+                                        <h4>Giỏ hàng của bạn</h4>
+                                    </div>
+                                    <div class="gioHang_hover_sp"></div>
+                                </div>
+                                <div class="gioHang_hover_button">
+                                    <button type="button" class="btn">Thanh toán</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-fix">
+                <div class="nav">
+                    <ul class="dropdown-list">
+                        <a href="../html/index.html"><li class="nav_sp">Trang chủ</li> </a>
+                        <a href="../html/allsanpham.html"><li class="nav_sp nav_menu_hover">Sản phẩm</li></a>
+                            <div >
+                                <ul class="dropdown_product_item_menu">
+                                    <ul class="ul_menu_item_1">
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nam</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ cho nữ</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Đồng hồ theo thương hiệu</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm mới</li></a>
+                                        <a href="../html/allsanpham.html"><li class="ul_menu_item">Sản phẩm bán chạy</li></a>
+                                    </ul>
+                                    <li class="img_item_dropdown_menu">
+                                    <img src="../img/img_dropdown.png" alt="Dong Ho">
+                                    </li>
+                                </ul>
+                            </div>
+                        <a href="../html/news.html"><li class="nav_sp">Tin tức</li></a>
+                        <a href="../html/sitemap.html"><li class="nav_sp">Site Map</li></a>
+                        <a href="../html/members.html"><li class="nav_sp">Giới thiệu</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="slider">
+            <img id="img" onclick="changeImage1()" src="../img/slider1.png" alt="">
+        </div>
+
+        <script>
+            var index = 1;
+            changeImage1 = function() {
+                var imgs = ["../img/slider2.png",
+                    "../img/slider3.png","../img/slider1.png"
+                ];
+                document.getElementById('img').src = imgs[index];
+                index=Math.floor(Math.random()*3);
+            }
+            setInterval(changeImage1, 1500);
+        </script>
+
+        <div id="brand_product">
+            <div class="title_brand_product"><h3>Một số thương hiệu</h3></div>
+            <div class="brand_some">
+                <div class="brand"><img src="../img/brand1.png" alt="Brand"></div>
+                <div class="brand"><img src="../img/brand2.png" alt="Brand"></div>
+                <div class="brand"><img src="../img/brand3.png" alt="Brand"></div>
+                <div class="brand"><img src="../img/brand4.png" alt="Brand"></div>
+                <div class="brand"><img src="../img/brand5.png" alt="Brand"></div>
+            </div>
+        </div>
+
+        <div class="content-top_ctn">
+            <h3 class="title_hot_product"><a class="changcolor" href="../html/allsanpham.html">Sản phẩm bán chạy <i class="fa-solid fa-angles-right"></i></a></h3>
+            <div id="content-top">
+                <div class="items_dongHo">
+                    <div class="information_dongHo">
+                        <a href="../html/detailproduct.html" onclick="setId(1)">               
+                            <div class="image">
+                                <img src="../img/dongho9.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Phillipe AUGUSTE PA202</p>
+                                <p class="red">6,325,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="items_dongHo">
+                    <div class="information_dongHo">
+                        <a href="../html/detailproduct.html" onclick="setId(2)">
+                            <div class="image">
+                                <img src="../img/dongho10.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ cao cấp Bovet AS36001SD12</p>
+                                <p class="red">11.900.000 đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="items_dongHo">
+                    <div class="information_dongHo">
+                        <a href="../html/detailproduct.html" onclick="setId(3)">
+                            <div class="image">
+                                <img src="../img/dongho11.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ EPOS SWISS E-340</p>
+                                <p class="red">38.700.000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="items_dongHo">
+                    <div class="information_dongHo">
+                        <a href="../html/detailproduct.html" onclick="setId(4)">
+                            <div class="image">
+                                <img src="../img/dongho12.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Jacques Lemans</p>
+                                <p class="red">15,855,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-under_ctn">
+            <h3 class="title_hot_product mt-40"><a class="changcolor"  href="..//html/allsanpham.html">Sản phẩm mới <i class="fa-solid fa-angles-right"></i></a></h3>
+            <div id="content-hot">
+                <div class="items_dongHo">
+                    <div class="information_dongHo bd_sl">
+                        <a href="../html/detailproduct.html" onclick="setId(5)">
+                            <div class="image">
+                                <img src="../img/dongho13.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Diamond Jacques DM36505IG</p>
+                                <p class="red">9,125,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
+                <div class="items_dongHo">
+                    <div class="information_dongHo bd_sl">
+                        <a href="../html/detailproduct.html" onclick="setId(6)">
+                            <div class="image">
+                                <img src="../img/dongho14.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Diamond Jacques DM38445IG </p>
+                                <p class="red">5,520,000đ</p>
+                            </div>         
+                        </a>
+                    </div>
+                </div> 
+                <div class="items_dongHo">
+                    <div class="information_dongHo bd_sl">
+                        <a href="../html/detailproduct.html" onclick="setId(7)">
+                            <div class="image">
+                                <img src="../img/dongho15.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Diamond Jacques DM38025IG</p>
+                                <p class="red">9,325,000đ</p>
+                            </div>
+                        </a>
+                    </div>                       
+                </div>     
+                <div class="items_dongHo">
+                    <div class="information_dongHo bd_sl">
+                        <a href="../html/detailproduct.html" onclick="setId(8)">
+                            <div class="image">
+                                <img src="../img/dongho16.png" alt="">
+                            </div>
+                            <div class="txt_div">
+                                <p class="txt">Đồng hồ Diamond Jacques DM36505</p>
+                                <p class="red">4,325,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <!-- Tin tức-------------------------------- -->
+        <div class="content-new-ctn">
+            <h3 class="title_hot_product mt-40"><a href="../html/news.html">Tin tức <i class="fa-solid fa-angles-right"></i></a></h3> 
+            <div id="content-news">
+                <div class="news_watch">
+                    <div class="img_new">
+                        <img src="../img/news1.png" alt="new">
+                    </div>
+                    <div class="p_new">
+                        <h4 class="border-bottom"><a onclick="setId(1)" href="../html/newsdetail.html"class="cl_bl">Đánh giá đồng hồ</a></h4><br>
+                        <p>Montblanc là một công ty với những dụng cụ bút viết sang trọng và công ty bắt đầu sản xuất đồng hồ vào năm</p>
+                        <b><a onclick="setId(1)" href="../html/newsdetail.html"class="cl_bl">Xem thêm...</a></b>
+                    </div>
+                </div>
+                <div class="news_watch">
+                    <div class="img_new">
+                        <img src="../img/img-tintuc.jpg" alt="new">
+                    </div>
+                    <div class="p_new">
+                        <h4 class="border-bottom"><a onclick="setId(2)" href="../html/newsdetail.html"class="cl_bl">Chọn đồng hồ theo mệnh</a></h4><br>
+                        <p>Bạn là người mệnh Mộc nhưng không biết nam nữ mệnh Mộc đeo đồng hồ màu gì mới tốt cho bản thân? Bài viết dưới đây Hải Triều sẽ giải đáp hết những khúc mắc này</p><b><a onclick="setId(2)" href="../html/newsdetail.html" class="cl_bl">Xem thêm...</a></b>
+                    </div>
+                </div>
+                <div class="news_watch">
+                    <div class="img_new">
+                        <img src="../img/news3.png" alt="new">
+                    </div>
+                    <div class="p_new">
+                        <h4 class="border-bottom"><a onclick="setId(3)" href="../html/newsdetail.html" class="cl_bl">Đồng hồ MontBlanc</a></h4><br>
+                        <p>Montblanc là một công ty với những dụng cụ bút viết sang trọng và công ty bắt đầu sản xuất đồng hồ vào năm 1996 trở lại đây,</p><b><a onclick="setId(3)" href="../html/newsdetail.html" class="cl_bl">Xem thêm...</a></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer---------------------------- -->
+        <div id="content-bottom">
+            <div class="text">
+                <h3 class="top">CHÚNG TÔI Ở ĐÂY</h3>
+                <ul>
+                    <li>Công Ty cổ phần trực tuyến LAUCH WATCH</li>
+                    <li>VPGD: Số 177,Phường 5 - Gò Vấp - TP.HCM</li>
+                    <li>Hotline:
+                        <link rel="stylesheet" href="#">0335829410</li>
+                    <li>tư vấn bán hàng(8h-21h hàng ngày)</li>
+                </ul>
+            </div>
+            <div class="text">
+                <h3 class="top">VỀ WATCH SHOP</h3>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div class="text">
+                <h3 class="top">CHÍNH SÁCH</h3>
+                <ul>
+                    <li><a href="#">Chính sách đối sản phẩm</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Chính sách mua hàng</a></li>
+                </ul>
+            </div>
+
+            <div class="text">
+                <h3 class="top">HỖ TRỢ</h3>
+            </div>
+
+            <div class="text">
+                <ul>
+                    <h3 class="top">LIÊN HỆ</h3>
+                    <li class="icon">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram-square"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-home">
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-angles-up"></i>
+                    <p>Quay lại đầu trang</p>
+                </a>
+            </div>
+        </div>
+        <div class="coppy-right">
+            <div>
+              <p>Powered By Binh & Diep - Since 2022 - © Góp ý & Khiếu nại: binh.com</p>
+            </div>
+        </div>
+       
+    </div>
+    <div id="modal">
+        <div class="modal-overlay"></div>
+        <div class="login-box">
+            <h2>Login</h2>
+            <button onclick="document.getElementById('modal').style.display=('none') ">
+                <i class="fa-solid fa-xmark" ></i>
+            </button>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label>Password</label>
+                </div>
+                <div class="button-submit">
+                    <a href="#" class="link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Đăng nhập
+                    </a>
+                </div>
+            </form>
+            <span class="checkBox"><input type="checkbox"> Nhớ mật khẩu</span> 
+            <p>Bạn chưa có tài khoản? <a href="../html/Form-dang-ky.html">Đăng kí</a> ngay</p>
+        </div>
+    </div>
+    <script>
+        const productList = JSON.parse(localStorage.getItem('product'))
+        const id = JSON.parse(localStorage.getItem('id'))
+        const findId = productList.find(el => el.id === id)
+        let count = 1;
+        let temp = 0
+        const decrease = document.querySelector('.decrease')
+        const quantity = document.getElementById('number');
+        const increase = document.querySelector('.increase')
+        const addproductdetail = document.querySelector('.add-productdetail')
+       
+        const addProduct = (product) => {
+            const list = `
+            <li class="list-product-item">
+                <div class="product-list-img">
+                    <img src="${product.img}" alt="">
+                </div>
+                <div class="list-product-description">
+                    <h5 class="product-list-name">${product.name}</h5>
+                    <div class="cost">
+                        <span class="list-cost">${product.unitprice}</span>
+                        <span class="list-quantity">da co: ${count}</span>
+                        <span class="delete-product" onclick="removeProduct()">Xoá</span>
+                    </div>
+                </div>                                                
+            </li>
+            `
+            $('.list-cart').append(list)
+        }
+        const setId = (id) => {
+            localStorage.setItem('id', id);
+        }
+       
+        $(document).ready(() => {
+            $('.productdetail-title').html(findId.name)
+            $('.trademark').html(findId.trademark)
+            $('.status').html(findId.status)
+            $('.money').html(findId.unitprice)
+            $('.information').html(findId.information)
+            $('.productCode').html(findId.productCode)
+            $('#img-product').attr('src', findId.img)
+            $('.diameter').html(findId.diameter)
+            $('.rope_size').html(findId.rope_size)
+            $('.material').html(findId.material)
+            $('.origin').html(findId.origin)
+        })
+        //Tìm kiếm
+        window.onload=()=>{
+            document.getElementById("search").addEventListener("click", () => {
+            //initializations
+        
+            let searchInput = document.getElementById("search-input").value;
+            let elements = document.querySelectorAll(".product-name");
+            let cards = document.querySelectorAll(".card");
+            
+            //loop through all elements
+            elements.forEach((element, index) => {
+            //check if text includes the search value
+            if (element.innerText.includes(searchInput)) {
+                //display matching card
+            cards[index].classList.remove("hide");
+                } else {
+                //hide others
+            cards[index].classList.add("hide");
+            }
+         });
+         });
+       }
+
+        //Hiển thị sản phẩm trong giỏ hàng
+        
+        var cart_trigger=JSON.parse(localStorage.getItem('productincart'));
+
+        console.log(cart_trigger);
+            
+        const display_cart=(productincart)=>{
+            const card=
+    `<div class="inner_cart ${productincart.id}">
+
+        <div class="img_sanpham">
+          <img class="img" src="${productincart.img}" alt="">
+        </div>
+        <div class="name_sanpham"><p>${productincart.name}</p></div>
+        <div class="soluong_sanpham">
+            <select class="form-control small-select" name="quantity" id="qty9343848" onchange="this.form.submit()">
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>	
+            </select>
+        </div>
+        <div class="gia_sanpham"><p>${productincart.unitprice}</p></div>
+        <i class="fa-solid fa-trash-can ${productincart.id} bin"></i>
+    </div>
+    </div>`
+    $('.gioHang_hover_sp').append(card);
+            }
+            cart_trigger.forEach(el => {
+                display_cart(el)
+        })
+
+    </script>
+</body>
+
+</html>
